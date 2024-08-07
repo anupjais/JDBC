@@ -1,0 +1,13 @@
+package com.qsp;
+
+public class BasicProject {
+	public static void main(String[] args) {
+		try {
+			Class.forName("org.postgrsql.Driver");
+			System.out.println("Driver is loaded.");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
