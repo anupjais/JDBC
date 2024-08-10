@@ -28,7 +28,7 @@ public class FetchData {
 			{
 				System.out.println(rs.getInt(1));
 				System.out.println(rs.getString(2));
-//				System.out.println(rs.getCurrency());
+//				System.out.println(rs.getDouble(3));
 				System.out.println("-----------");
 			}
 			
