@@ -1,5 +1,6 @@
 package com.qsp.view;
 
+import java.sql.ResultSet;
 import java.util.Scanner;
 
 import com.qsp.controller.EmployeeController;
@@ -7,9 +8,14 @@ import com.qsp.model.Employee;
 
 public class EmployeeView {
 
+	static Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		Employee e = new Employee();
+
+//		System.out.print("Employee name : ");
+//		String name = sc.next();
+//		System.out.println(EmployeeController.deleteByName(name));
 
 		cls();
 		outerloop: for (;;) {
@@ -21,33 +27,23 @@ public class EmployeeView {
 			switch (opt) {
 			case 1:
 				cls();
-				homeOption();
-				inp();
-				int inpOpt = sc.nextInt();
-				switch (inpOpt) {
-				case 1:
-					cls();
-					System.out.println("Login");
-					break;
-				case 2:
-					cls();
-					System.out.println("EXIT");
-					break;
-				default:
-					cls();
-					incrOpt();
-
-				}
+				insertData();
 				break;
 			case 2:
 				cls();
-				aboutUs();
+				updateOption();
 				break;
 			case 3:
 				cls();
-				contactUs();
+				deleteOption();
 				break;
 			case 4:
+				cls();
+				System.out.print("Enter Id : ");
+				int id = sc.nextInt();
+				System.out.println(getData(id));
+				break;
+			case 5:
 				cls();
 				ext();
 			default:
@@ -72,7 +68,39 @@ public class EmployeeView {
 
 	public static void options() {
 		int count = 1;
-		String[] opt = { "Home", "About us", "Contact us", "EXIT" };
+//		String[] opt = { "Home", "About us", "Contact us", "EXIT" };
+		String[] opt = { "Insert", "Update", "Delete", "Display", "EXIT" };
+		for (String op : opt)
+			System.out.println(count++ + ". " + op);
+	}
+
+	public static void insertData() {
+		Employee e = new Employee();
+		System.out.print("Id : ");
+		e.setId(sc.nextInt());
+//		int id=sc.nextInt();
+
+		System.out.print("Name : ");
+		e.setName(sc.nextLine());
+		System.out.print("Salary : ");
+		e.setSal(sc.nextDouble());
+		EmployeeController.insert(e);
+	}
+
+	public static Employee getData(int id) {
+		return EmployeeController.fetchById(id);
+	}
+
+	public static void updateOption() {
+		int count = 1;
+		String[] opt = { "By ID", "By Name", "By Salary", "EXIT" };
+		for (String op : opt)
+			System.out.println(count++ + ". " + op);
+	}
+
+	public static void deleteOption() {
+		int count = 1;
+		String[] opt = { "By ID", "By Name", "By Salary", "EXIT" };
 		for (String op : opt)
 			System.out.println(count++ + ". " + op);
 	}
@@ -129,4 +157,5 @@ public class EmployeeView {
 	static void cls() {
 		System.out.println("\033[H \033[2J");
 	}
+
 }

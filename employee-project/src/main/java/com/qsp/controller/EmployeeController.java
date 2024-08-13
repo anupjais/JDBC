@@ -60,6 +60,25 @@ public class EmployeeController {
 		}
 		return emp;
 	}
+	public static Employee fetchByName(String name)
+	{
+		Employee emp = new Employee();
+		try {
+			PreparedStatement ps = con.prepareStatement("select * from employee where name=?");
+			ps.setString(1, name);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				emp.setId(rs.getInt("id"));
+				emp.setName(rs.getString("name"));
+				emp.setSal(rs.getDouble("sal"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return emp;
+	}
 	
 	public static boolean deleteById(int id)
 	{
@@ -69,6 +88,24 @@ public class EmployeeController {
 			try {
 				PreparedStatement ps = con.prepareStatement("delete from employee where id=?");
 				ps.setInt(1, id);
+				ps.executeUpdate();
+			}catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+			return true;
+		}else {
+			return false;
+		}
+	}
+	public static boolean deleteByName(String name)
+	{
+		Employee emp = fetchByName(name);
+		if(emp.getName() != null)
+		{
+			try {
+				PreparedStatement ps = con.prepareStatement("delete from employee where name=?");
+				ps.setString(1, name);
 				ps.executeUpdate();
 			}catch(SQLException e)
 			{
