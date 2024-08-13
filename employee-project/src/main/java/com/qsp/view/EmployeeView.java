@@ -1,6 +1,7 @@
 package com.qsp.view;
 
 import java.sql.ResultSet;
+import java.util.List;
 import java.util.Scanner;
 
 import com.qsp.controller.EmployeeController;
@@ -45,6 +46,10 @@ public class EmployeeView {
 				break;
 			case 5:
 				cls();
+				getAllData();
+				break;
+			case 6:
+				cls();
 				ext();
 			default:
 				cls();
@@ -69,7 +74,7 @@ public class EmployeeView {
 	public static void options() {
 		int count = 1;
 //		String[] opt = { "Home", "About us", "Contact us", "EXIT" };
-		String[] opt = { "Insert", "Update", "Delete", "Display", "EXIT" };
+		String[] opt = { "Insert", "Update", "Delete", "Display", "Display All", "EXIT" };
 		for (String op : opt)
 			System.out.println(count++ + ". " + op);
 	}
@@ -79,6 +84,7 @@ public class EmployeeView {
 		System.out.print("Id : ");
 		e.setId(sc.nextInt());
 //		int id=sc.nextInt();
+		sc.nextLine();
 
 		System.out.print("Name : ");
 		e.setName(sc.nextLine());
@@ -89,6 +95,13 @@ public class EmployeeView {
 
 	public static Employee getData(int id) {
 		return EmployeeController.fetchById(id);
+	}
+	public static void getAllData() {
+		List<Employee> li = EmployeeController.fetchAll();
+		for(Employee e : li)
+		{
+			System.out.println(e);
+		}
 	}
 
 	public static void updateOption() {

@@ -23,5 +23,9 @@ public class Employee {
 	public void setSal(double sal) {
 		this.sal = sal;
 	}
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", sal=" + sal + "]";
+	}
 	
 }

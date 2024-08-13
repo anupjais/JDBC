@@ -32,6 +32,7 @@ public class EmployeeController {
 			ps.setInt(1, e.getId());
 			ps.setString(2, e.getName());
 			ps.setDouble(3, e.getSal());
+			ps.executeUpdate();
 		} catch (SQLException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -115,5 +116,25 @@ public class EmployeeController {
 		}else {
 			return false;
 		}
+	}
+	public static List<Employee> fetchAll()
+	{
+		List<Employee> list = new ArrayList<Employee>();
+		try {
+			PreparedStatement ps = con.prepareStatement("select * from employee");
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				Employee emp = new Employee();
+				emp.setId(rs.getInt("id"));
+				emp.setName(rs.getString("name"));
+				emp.setSal(rs.getDouble("sal"));
+				list.add(emp);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return list;
 	}
 }
