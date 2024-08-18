@@ -1,7 +1,0 @@
-package com.qsp;
-
-public class BasicProject {
-	public static void main(String[] args) {
-
-	}
-}

@@ -14,6 +14,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -25,10 +26,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.qsp.servlet_work"/>
 		</list>
 		<list key="groupId">
+			<item value="com.qsp"/>
 		</list>
 		<list key="artifactId">
+			<item value="servlet-work"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,13 +48,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="com.qsp"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="demo"/>
-			<item value="jdbc-basic"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

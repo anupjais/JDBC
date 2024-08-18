@@ -28,3 +28,24 @@ public class EmployeeView2 {
 	}
 
 }
+
+
+/*
+ * 1. What is API? give an example.
+ * 2. What is JDBC?
+ * 3. What is JDBC driver?
+ * 4. Types of JDBC Drivers.
+ * 5. Steps of JDBC.
+ * 6. What is ResultSet, why we use it?
+ * 7. How to create Statements? explain..
+ * 8. How to create Connection? explain..
+ * 9. How to load the Driver? explain..
+ * 10. What is Class loading?
+ * 11. What is JAR file?
+ * 12. How to execute queries, explain all method.
+ * 13. What is the return type of execute?
+ * 14. How to use Dynamic ?
+ * 15. What is delimiter ?
+ * 16. How to store data inside delimiter?
+ * 17. What is the need of closing the Connection?
+ * */
