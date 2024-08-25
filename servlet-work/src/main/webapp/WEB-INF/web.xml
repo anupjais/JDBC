@@ -1,7 +1,24 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<!-- <web-app> <display-name>Deccan Mitra Mandali</display-name> <servlet> 
+	<servlet-name>RegsterServer</servlet-name> <servlet-class>com.qsp.RegsterServer</servlet-class> 
+	</servlet> <servlet-mapping> <servlet-name>RegsterServer</servlet-name> <url-pattern>/reg</url-pattern> 
+	</servlet-mapping> <servlet> <servlet-name>Home</servlet-name> <servlet-class>com.qsp.Home</servlet-class> 
+	<load-on-startup>1</load-on-startup> </servlet> <servlet-mapping> <servlet-name>Home</servlet-name> 
+	<url-pattern>/home</url-pattern> </servlet-mapping> <servlet> <servlet-name>Message</servlet-name> 
+	<servlet-class>com.qsp.Message</servlet-class> <load-on-startup>3</load-on-startup> 
+	</servlet> <servlet-mapping> <servlet-name>Message</servlet-name> <url-pattern>/message</url-pattern> 
+	</servlet-mapping> <servlet> <servlet-name>About</servlet-name> <servlet-class>com.qsp.About</servlet-class> 
+	<load-on-startup>2</load-on-startup> </servlet> <servlet-mapping> <servlet-name>About</servlet-name> 
+	<url-pattern>/about</url-pattern> </servlet-mapping> </web-app> -->
+
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>Home</servlet-name>
+		<servlet-class>com.qsp.Home</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
 </web-app>
