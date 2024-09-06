@@ -11514,3 +11514,23 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.eclemma.internal.ui.E
 	at org.eclipse.eclemma.internal.ui.UIPreferences$1.getActivateNewSessions(UIPreferences.java:57)
 	at org.eclipse.eclemma.internal.core.launching.AgentServer.run(AgentServer.java:123)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-08-28 11:36:40.550 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.committers.product -keyring /Users/anupjaiswal/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.committers.product -keyring /Users/anupjaiswal/.eclipse_keyring -data /Users/anupjaiswal/Desktop/JDBC
+
+!ENTRY org.eclipse.wst.server.core 4 0 2024-08-28 11:36:59.436
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+!SESSION 2024-09-02 05:24:22.832 -----------------------------------------------
+eclipse.buildId=4.32.0.20240606-1231
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.committers.product -keyring /Users/anupjaiswal/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.committers.product -keyring /Users/anupjaiswal/.eclipse_keyring -data /Users/anupjaiswal/Desktop/JDBC
+
+!ENTRY org.eclipse.wst.server.core 4 0 2024-09-02 05:29:26.661
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
